@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMP6.NewPage3"
+             Title="Таймер">
+    <VerticalStackLayout Background="AliceBlue" Spacing="20">
+        <Frame HorizontalOptions="Center" Margin="30,100,30,100">
+            <StackLayout HorizontalOptions="Center" Background="AliceBlue" Padding="30">
+                <Label Text="Выберите время для таймера:"
+                   FontSize="20" 
+                   HorizontalOptions="Center" />
+
+                <TimePicker x:Name="timePicker"
+                        Format="HH:mm"
+                        HorizontalOptions="CenterAndExpand" FontSize="60" />
+                <Label x:Name="timeLabel" Text="Оставшееся время:" FontSize="24" HorizontalOptions="Center"/>
+
+                <Button Text="Запустить таймер" FontSize="18" Clicked="Button_Clicked"  HorizontalOptions="Center" 
+                 Margin="15" WidthRequest="200" Padding="15" Background="#B9B3B1"  BorderColor="#958F8D" BorderWidth="1"/>
+               
+                <Button Text="Остановить таймер" FontSize="18" HorizontalOptions="Center"
+                 Margin="15" WidthRequest="200" Padding="15" Background="#B9B3B1"  BorderColor="#958F8D" BorderWidth="1"
+                 Clicked="Button_Clicked_1" />
+
+             
+            </StackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

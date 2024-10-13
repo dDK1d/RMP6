@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMP6.NewPage1">
+    <VerticalStackLayout Background="AliceBlue" Spacing="20">
+        
+            <StackLayout HorizontalOptions="Center" 
+                         Background="AliceBlue" Padding="5">
+                <Label Text="Выберите время будильника:" 
+                       FontSize="24" 
+                       HorizontalOptions="Center" />
+                <TimePicker x:Name="AlarmTimePicker" 
+                            Time="07:00" 
+                            Format="HH:mm" />
+
+                <Label Text="Дни недели:" 
+                       FontSize="24" 
+                       HorizontalOptions="Center" />
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Center" 
+                             Spacing="10">
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxMon" />
+                        <Label Text="Пн" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxTue" />
+                        <Label Text="Вт"
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxWed" />
+                        <Label Text="Ср" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxThu" />
+                        <Label Text="Чт" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxFri" />
+                        <Label Text="Пт" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxSat" />
+                        <Label Text="Сб" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <CheckBox x:Name="CheckBoxSun" />
+                        <Label Text="Вс" 
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Text="Включить будильник" 
+                        x:Name="EnableAlarmButton"
+                        Clicked="OnEnableAlarmClicked" 
+                        Padding="15" 
+                        Margin="10" 
+                        Background="#B9B3B1" />
+                <Button Text="Выключить будильник" 
+                        x:Name="DisableAlarmButton"
+                        Clicked="OnDisableAlarmClicked" 
+                        Padding="15" 
+                        Margin="10" 
+                        Background="#B9B3B1" />
+            </StackLayout>
+    
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMP6.NewPage2"
+             Title="Секундомер">
+    <VerticalStackLayout Background="AliceBlue" Spacing="20">
+        <Frame HorizontalOptions="Center" Margin="30,100,30,100">
+            <StackLayout HorizontalOptions="Center" Background="AliceBlue" Padding="30">
+            
+            <Label x:Name="TimerLabel" Text="00:00:00" FontSize="48"  HorizontalOptions="Center"  />
+
+        
+            <Button Text="Старт" x:Name="OnStart" Clicked="OnStartClicked"
+                   Margin="15" WidthRequest="200" Padding="15" Background="#B9B3B1"  BorderColor="#958F8D" BorderWidth="1"/>
+            <Button Text="Стоп" x:Name="OnStop" Clicked="OnStopClicked"
+                    Margin="15" WidthRequest="200" Padding="15" Background="#B9B3B1"  BorderColor="#958F8D" BorderWidth="1"/>
+            <Button Text="Сброс" x:Name="OnReset" Clicked="OnResetClicked"
+                   Margin="15" WidthRequest="200" Padding="15" Background="#B9B3B1"  BorderColor="#958F8D" BorderWidth="1"/>
+                
+
+
+            </StackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
